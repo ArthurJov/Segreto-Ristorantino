@@ -1,0 +1,200 @@
+/* ==========================================================================
+   COMPONENTES GERAIS — Segreto Ristorantino
+   ========================================================================== */
+
+/* Container Principal */
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 var(--section-x);
+}
+
+/* Cursor Customizado Desktop */
+.custom-cursor {
+  display: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  body {
+    cursor: none;
+  }
+
+  .custom-cursor {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    background-color: var(--color-gold-rich);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    mix-blend-mode: difference;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s ease, height 0.3s ease;
+  }
+
+  .custom-cursor.is-hovering {
+    width: 52px;
+    height: 52px;
+    background-color: rgba(226, 194, 125, 0.15);
+    backdrop-filter: invert(1);
+    mix-blend-mode: normal;
+  }
+}
+
+/* Espaçamento Padrão de Seções */
+.section-padding {
+  padding: var(--section-y) 0;
+}
+
+/* ==========================================================================
+   BOTÕES
+   Padrão: outline dourado sobre carvão. Preenchimento sólido só no hover.
+   Regra: se preenchido em gold-rich, texto = bg-void. Nunca creme sobre dourado.
+   ========================================================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: var(--font-ui);
+  font-size: var(--text-xs);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-widest);
+  padding: 0 2rem;
+  height: 48px;
+  border-radius: 2px;
+  transition: all var(--dur-base) var(--ease-smooth);
+  white-space: nowrap;
+}
+
+.btn:active {
+  transform: scale(0.96);
+}
+
+/* Botão Outline (padrão de identidade do Segreto) */
+.btn--outline {
+  border: 1px solid var(--color-gold-rich);
+  color: var(--color-gold-rich);
+  background-color: transparent;
+}
+
+@media (hover: hover) {
+  .btn--outline:hover {
+    background-color: var(--color-gold-rich);
+    color: var(--color-bg-void); /* Regra: nunca creme sobre dourado */
+  }
+}
+
+/* Botão Texto — apenas sublinhado */
+.btn--text {
+  padding: 0;
+  height: auto;
+  color: var(--color-text-ghost);
+  font-size: 0.7rem;
+  border: none;
+  position: relative;
+}
+
+.btn--text::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 1px;
+  background-color: var(--color-gold-muted);
+  transition: width var(--dur-fast) var(--ease-smooth);
+}
+
+@media (hover: hover) {
+  .btn--text:hover {
+    color: var(--color-gold-light);
+  }
+  .btn--text:hover::after {
+    width: 100%;
+  }
+}
+
+/* Setas para botões */
+.arrow {
+  display: inline-block;
+  transition: transform var(--dur-fast) var(--ease-hover);
+}
+
+@media (hover: hover) {
+  .btn:hover .arrow {
+    transform: translateX(4px) translateY(-2px);
+  }
+}
+
+/* ==========================================================================
+   LIGHTBOX DA GALERIA
+   ========================================================================== */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: rgba(11, 13, 12, 0.95);
+  backdrop-filter: blur(16px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity var(--dur-fast) var(--ease-smooth), visibility var(--dur-fast) var(--ease-smooth);
+}
+
+.lightbox.is-active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.lightbox__figure {
+  position: relative;
+  max-width: 90vw;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.lightbox__img {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 4px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+  border: 1px solid var(--color-gold-border);
+}
+
+.lightbox__close {
+  position: absolute;
+  top: -2.5rem;
+  right: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--color-gold-border);
+  color: var(--color-text-ghost);
+  font-size: 1.25rem;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: all var(--dur-fast) var(--ease-smooth);
+}
+
+@media (hover: hover) {
+  .lightbox__close:hover {
+    border-color: var(--color-gold-rich);
+    color: var(--color-gold-rich);
+  }
+}

@@ -1,0 +1,88 @@
+/* ==========================================================================
+   TIPOGRAFIA GLOBAL — Segreto Ristorantino
+   ========================================================================== */
+
+body {
+  font-family: var(--font-ui);
+  font-size: var(--text-base);
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-hero);
+  font-weight: 300; /* Leve, não regular — diferencial editorial */
+  line-height: 1.1;
+  color: var(--color-text-cream);
+}
+
+/* Helper Classes para Headings fluidos */
+.text-display {
+  font-size: var(--text-display);
+  font-weight: 300;
+  line-height: 1.05; /* Apertado para títulos grandes */
+  letter-spacing: var(--tracking-tight);
+}
+
+.text-3xl {
+  font-size: var(--text-3xl);
+  font-weight: 300;
+  line-height: 1.1;
+}
+
+.text-2xl {
+  font-size: var(--text-2xl);
+  font-weight: 300;
+  line-height: 1.15;
+}
+
+.text-xl {
+  font-size: var(--text-xl);
+  font-weight: 400;
+}
+
+.text-lg {
+  font-size: var(--text-lg);
+}
+
+.text-sm {
+  font-size: var(--text-sm);
+}
+
+.text-xs {
+  font-size: var(--text-xs);
+}
+
+/* Helpers de Cor */
+.text-muted {
+  color: var(--color-text-muted);
+}
+
+.text-ghost {
+  color: var(--color-text-ghost);
+}
+
+.text-gold {
+  color: var(--color-gold-rich);
+}
+
+.italic {
+  font-style: italic;
+}
+
+/* Eyebrow / Rótulo de Seção
+   Versalete com tracking largo — o gesto que faz parecer menu impresso.
+   Cor: --color-text-ghost (não gold, não creme — discreta) */
+.eyebrow {
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-widest); /* 0.18em */
+  color: var(--color-text-ghost);
+}
+
+/* Variante olive para rótulos de etapa do menu */
+.eyebrow--olive {
+  color: var(--color-olive);
+}

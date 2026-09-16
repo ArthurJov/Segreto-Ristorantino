@@ -1,0 +1,73 @@
+:root {
+  /* ==========================================================================
+     PALETA DE CORES — Segreto Ristorantino
+     Carvão · Dourado Envelhecido · Oliva · Creme
+     ========================================================================== */
+  --color-bg-void:     #0B0D0C; /* Fundo absoluto, navbar, rodapé */
+  --color-bg-base:     #0F1110; /* Transição entre seções */
+  --color-bg-surface:  #171918; /* Cards e superfícies */
+  --color-bg-elevated: #1E2120; /* Header no scroll */
+
+  --color-gold-rich:   #C9A45C; /* Identidade, CTA, filetes */
+  --color-gold-light:  #E0C27D; /* Hover */
+  --color-gold-muted:  #A0833F; /* Bordas discretas, estado pressionado */
+  --color-gold-border: rgba(201, 164, 92, 0.15); /* Dividers sutis */
+
+  --color-text-cream:  #F2F0E9; /* Texto principal */
+  --color-text-muted:  #B7B1A6; /* Texto secundário */
+  --color-text-ghost:  #6E6A63; /* Legendas, rótulos de seção */
+
+  --color-olive:       #68705D; /* Ícones, rótulos de etapa do menu, filetes */
+  --color-olive-deep:  #4F564A; /* Variação escura do olive */
+  --color-wood:        #5A3A22; /* APENAS superfície e borda — nunca texto */
+
+  /* ==========================================================================
+     TIPOGRAFIA
+     ========================================================================== */
+  --font-hero: 'Cormorant Garamond', serif;
+  --font-ui:   'DM Sans', sans-serif;
+
+  /* Escala Tipográfica (Fluid Type) */
+  --text-xs:      0.75rem;                        /* 12px */
+  --text-sm:      0.875rem;                       /* 14px */
+  --text-base:    1rem;                           /* 16px */
+  --text-lg:      1.25rem;                        /* 20px */
+  --text-xl:      clamp(1.5rem, 2.5vw, 2rem);    /* 24–32px */
+  --text-2xl:     clamp(1.75rem, 4vw, 3rem);     /* 28–48px */
+  --text-3xl:     clamp(2rem, 6vw, 4.5rem);      /* 32–72px */
+  --text-display: clamp(2.25rem, 8vw, 6.5rem);   /* 36–104px */
+
+  /* Letter Spacing */
+  --tracking-tight:   -0.02em;
+  --tracking-normal:   0em;
+  --tracking-wide:     0.10em;
+  --tracking-widest:   0.18em; /* Versalete editorial */
+
+  /* ==========================================================================
+     ESPAÇAMENTO — "O luxo respira"
+     ========================================================================== */
+  --space-xs:  8px;
+  --space-sm:  16px;
+  --space-md:  32px;
+  --space-lg:  64px;
+  --space-xl:  96px;
+  --space-2xl: 160px;
+
+  --section-y: clamp(80px, 12vw, 160px);
+  --section-x: clamp(24px, 8vw, 120px);
+
+  /* ==========================================================================
+     TOKENS DE MOTION
+     ========================================================================== */
+  --dur-instant: 150ms;
+  --dur-fast:    300ms;
+  --dur-base:    500ms;
+  --dur-slow:    800ms;
+  --dur-luxe:    1200ms;
+  --dur-cinema:  1600ms;
+
+  --ease-smooth:    cubic-bezier(0.25, 0.10, 0.25, 1.00);
+  --ease-out-expo:  cubic-bezier(0.16, 1.00, 0.30, 1.00);
+  --ease-in-out-s:  cubic-bezier(0.77, 0.00, 0.18, 1.00);
+  --ease-hover:     cubic-bezier(0.40, 0.00, 0.20, 1.00);
+}

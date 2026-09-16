@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- DEMO: noindex obrigatório até publicação oficial autorizada -->
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- SEO -->
+  <title>Segreto Ristorantino | Menu Degustação Italiano em Salvador</title>
+  <meta name="description" content="Cozinha italiana contemporânea com ingredientes baianos, em uma sala de 26 lugares. Menu degustação dos chefs Fabrício Lemos e Lisiane Arouca. Caminho das Árvores, Salvador. Apenas com reserva.">
+  <!-- Buscam pelos dois bairros: Caminho das Árvores e Pituba -->
+  <meta name="keywords" content="restaurante italiano Salvador, menu degustação Salvador, Caminho das Árvores, Pituba, Fabrício Lemos, Lisiane Arouca, Grupo Origem, Segreto Ristorantino">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Segreto Ristorantino | Menu Degustação Italiano em Salvador">
+  <meta property="og:description" content="Cozinha italiana contemporânea com a alma da Bahia. Uma sala de 26 lugares, apenas com reserva.">
+  <meta property="og:image" content="./assets/logo/segreto-logo-principal.png">
+  <meta property="og:url" content="#">
+  <!-- PENDENTE: substituir og:url pela URL definitiva antes de publicar -->
+  <meta property="og:type" content="restaurant">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="./assets/logo/iconeClaro.png">
+  <link rel="apple-touch-icon" href="./assets/logo/iconeClaro.png">
+
+  <!-- Google Fonts: Cormorant Garamond + DM Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/00-variables.css">
+  <link rel="stylesheet" href="./css/01-base.css">
+  <link rel="stylesheet" href="./css/02-typography.css">
+  <link rel="stylesheet" href="./css/03-components.css">
+  <link rel="stylesheet" href="./css/04-sections.css">
+  <link rel="stylesheet" href="./css/05-animations.css">
+  <link rel="stylesheet" href="./css/06-responsive.css">
+</head>
+<body class="is-loading">
+
+  <!-- Cursor magnético (desktop only) -->
+  <div class="custom-cursor"></div>
+
+  <!-- ============================================================
+       PRELOADER
+       ============================================================ -->
+  <div id="preloader">
+    <figure class="preloader__logo">
+      <img src="./assets/logo/iconeClaro.png" alt="Segreto Ristorantino">
+    </figure>
+  </div>
+
+  <!-- ============================================================
+       HEADER
+       ============================================================ -->
+  <header class="site-header" id="header">
+    <div class="site-header__container">
+      <a href="#" class="site-header__logo">
+        <img src="./assets/logo/iconeClaro.png" alt="Segreto Ristorantino">
+      </a>
+
+      <!-- Desktop Nav — 4 links apenas -->
+      <nav class="site-header__nav" aria-label="Navegação principal">
+        <a href="#manifesto" class="nav-link">A Casa</a>
+        <a href="#menu"      class="nav-link">O Menu</a>
+        <a href="#sala"      class="nav-link">A Sala</a>
+        <a href="#visita"    class="nav-link">A Visita</a>
+      </nav>
+
+      <!-- CTA fixo: único lembrete de reserva entre hero e rodapé (9.3) -->
+      <a href="https://segreto.meitre.com/"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="btn btn--outline site-header__cta"
+         id="header-cta-reservar">
+        Reservar <span class="arrow">↗</span>
+      </a>
+
+      <!-- Mobile Hamburger -->
+      <button class="site-header__menu-btn" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Menu Mobile Overlay -->
+  <div class="mobile-menu" role="dialog" aria-modal="true" aria-label="Menu de navegação">
+    <div class="mobile-menu__brand" style="margin-bottom: 2.5rem;">
+      <img src="./assets/logo/segreto-logo-icone.jpg" alt="Segreto Ristorantino" style="height: 48px; width: auto; object-fit: contain;">
+    </div>
+    <nav class="mobile-menu__nav">
+      <a href="#manifesto" class="mobile-link">A Casa</a>
+      <a href="#menu"      class="mobile-link">O Menu</a>
+      <a href="#sala"      class="mobile-link">A Sala</a>
+      <a href="#visita"    class="mobile-link">A Visita</a>
+      <a href="https://segreto.meitre.com/"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="btn btn--outline mobile-cta"
+         id="mobile-cta-reservar">
+        Reservar
+      </a>
+    </nav>
+  </div>
+
+  <!-- ============================================================
+       CONTEÚDO PRINCIPAL
+       ============================================================ -->
+  <main>
+
+    <!-- ══════════════════════════════════════════════════════════
+         BLOCO 1 — HERO
+         ══════════════════════════════════════════════════════════ -->
+    <section class="hero" id="hero" aria-label="Apresentação">
+      <div class="hero__bg-wrapper">
+        <!--
+          IMAGEM HERO: segreto-hero.png já presente no repositório.
+          SUBSTITUIR por foto real do Segreto antes de apresentar ao cliente.
+        -->
+        <img src="./assets/images/hero/segreto-hero.png"
+             alt="Sala de jantar do Segreto Ristorantino com iluminação acolhedora"
+             class="hero__bg-img"
+             fetchpriority="high">
+      </div>
+      <div class="hero__overlay" aria-hidden="true"></div>
+
+      <div class="hero__content">
+        <!-- Linha de serviço em versalete — discreta, acima do título -->
+        <p class="hero__service-line" aria-label="Horário de funcionamento">
+          Terça a sábado &nbsp;·&nbsp; 19h às 22h30 &nbsp;·&nbsp; Apenas com reserva
+        </p>
+
+        <!-- Headline principal -->
+        <h1 class="hero__title text-display">
+          <div class="js-mask"><span class="js-mask-inner">O segredo mais bem</span></div>
+          <div class="js-mask"><span class="js-mask-inner">guardado de Salvador.</span></div>
+        </h1>
+
+        <!-- Subheadline -->
+        <p class="hero__subtitle">
+          Cozinha italiana contemporânea com a alma da Bahia, em um menu degustação
+          assinado por Fabrício Lemos e Lisiane Arouca.
+        </p>
+
+        <!-- CTA único no hero — segundo botão dilui -->
+        <div class="hero__ctas">
+          <a href="https://segreto.meitre.com/"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="btn btn--outline"
+             id="hero-cta-reservar">
+            Reservar <span class="arrow">↗</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero__scroll-indicator" aria-hidden="true">↓</div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════════════════
+         BLOCO 2 — A CASA
+         ══════════════════════════════════════════════════════════ -->
+    <section class="manifesto section-padding" id="manifesto" aria-label="A Casa">
+      <div class="container manifesto__grid">
+
+        <div class="manifesto__img-wrapper js-img-reveal">
+          <!--
+            IMAGEM A CASA: manifesto-foto.jpg do repositório original.
+            SUBSTITUIR por foto real do ambiente ou dos chefs do Segreto
+            antes de apresentar ao cliente. Ver nota 9.2 do briefing.
+          -->
+          <img src="./assets/images/manifesto/manifesto-foto.jpg"
+               alt="Interior do Segreto Ristorantino — Caminho das Árvores, Salvador"
+               class="manifesto__img"
+               loading="lazy">
+        </div>
+
+        <div class="manifesto__content">
+          <p class="eyebrow js-fade-up">A Casa</p>
+          <div class="manifesto__separator"></div>
+
+          <h2 class="text-3xl js-fade-up">A Itália,<br>lida pela Bahia.</h2>
+
+          <p class="js-fade-up" style="color: var(--color-text-muted); line-height: 1.75;">
+            Inaugurado em outubro de 2022, o Segreto é a casa italiana do Grupo Origem — o grupo dos chefs
+            Fabrício Lemos e Lisiane Arouca, o mesmo do restaurante Origem. A proposta é uma cozinha italiana
+            contemporânea construída com ingredientes e memórias baianas.
+          </p>
+
+          <p class="js-fade-up" style="color: var(--color-text-muted); line-height: 1.75;">
+            São 26 lugares, uma cozinha de finalização à vista e um menu que muda de temporada.
+            Fabrício assina entradas e principais; Lisiane, a panificação e as sobremesas.
+            Nada aqui é feito para escala.
+          </p>
+
+          <!-- Nota Google — única aparição no site inteiro -->
+          <div class="manifesto__google-note js-fade-up" aria-label="Avaliação Google">
+            <span class="manifesto__google-score">4,9★</span>
+            <div class="manifesto__google-label">
+              no Google<br>
+              <span style="opacity:0.6;">60 avaliações</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════════════════
+         BLOCO 3 — O MENU
+         ══════════════════════════════════════════════════════════ -->
+    <section class="menu-section section-padding" id="menu" aria-label="O Menu">
+      <div class="container">
+
+        <!-- Intro -->
+        <div class="menu__intro">
+          <p class="eyebrow js-fade-up">O Menu</p>
+          <div class="manifesto__separator" style="margin: 1.25rem 0;"></div>
+          <h2 class="text-3xl js-fade-up">Sete etapas.</h2>
+          <p class="js-fade-up">
+            Menu Prezzo Fisso em sete etapas — três fixas e quatro com opções de escolha.
+            O menu é renovado por temporada, acompanhando o que há de melhor em cada época.
+          </p>
+
+          <!-- Bloco de informação — placeholders intencionais -->
+          <div class="menu__info-block js-fade-up" style="margin-top: 2.5rem;" aria-label="Informações do menu">
+            <p class="menu__info-line">
+              Menu Prezzo Fisso &nbsp;·&nbsp;
+              <span class="menu__info-placeholder">R$ 390</span>
+              por pessoa
+            </p>
+            <p class="menu__info-line">
+              Taxa de rolha &nbsp;·&nbsp;
+              <span class="menu__info-placeholder">R$ 100</span>
+              por garrafa
+            </p>
+            <p class="menu__info-line">Menu infantil disponível</p>
+          </div>
+
+          <!-- Botão discreto para o Live Menu -->
+          <div class="menu__cta-area js-fade-up">
+            <a href="https://livemenu.app/menu/656627ca96079c005bfc5ca8"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="btn btn--text"
+               id="menu-cta-livemenu">
+              Ver o menu completo <span class="arrow">↗</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Percurso vertical — renderizado via menu-data.js + main.js -->
+        <div class="menu-journey" id="menu-journey" aria-label="Etapas do menu">
+          <!--
+            Este conteúdo é injetado dinamicamente por main.js a partir de ETAPAS em menu-data.js.
+            Para atualizar o cardápio, edite apenas js/menu-data.js.
+            Fallback estático abaixo (visível só se JS falhar):
+          -->
+          <noscript>
+            <p style="color: var(--color-text-ghost); font-size: 0.875rem;">
+              Por favor, habilite JavaScript para visualizar as etapas do menu.
+            </p>
+          </noscript>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════════════════
+         BLOCO 4 — A SALA
+         ══════════════════════════════════════════════════════════ -->
+    <section class="gallery section-padding" id="sala" aria-label="A Sala">
+      <div class="container">
+
+        <header class="gallery__header">
+          <p class="eyebrow js-fade-up">A Sala</p>
+          <div class="manifesto__separator" style="margin: 1.25rem 0;"></div>
+          <h2 class="text-3xl js-fade-up">Vinte e seis lugares.</h2>
+          <p class="js-fade-up">
+            Uma sala pequena, com a cozinha de finalização à vista.
+            Mesas para dois e, em ocasiões especiais, uma mesa de até doze.
+          </p>
+        </header>
+
+        <!--
+          GALERIA: usando fotos de ambiente do repositório.
+          SUBSTITUIR por fotos reais do salão do Segreto antes de apresentar.
+          Ver nota 9.2 do briefing — fotos do ambiente errado são o detalhe
+          que grita "mockup" para quem conhece o restaurante.
+          Máximo 4 fotos. Sem legenda.
+        -->
+        <div class="gallery__grid">
+          <div class="gallery__item"
+               data-lightbox-src="./assets/images/ambiente/salao-01.jpg">
+            <img src="./assets/images/ambiente/salao-01.jpg"
+                 alt="Ambiente do Segreto Ristorantino"
+                 loading="lazy">
+          </div>
+          <div class="gallery__item"
+               data-lightbox-src="./assets/images/ambiente/salao-02.jpg">
+            <img src="./assets/images/ambiente/salao-02.jpg"
+                 alt="Ambiente do Segreto Ristorantino"
+                 loading="lazy">
+          </div>
+          <div class="gallery__item"
+               data-lightbox-src="./assets/images/ambiente/salao-03.jpg">
+            <img src="./assets/images/ambiente/salao-03.jpg"
+                 alt="Ambiente do Segreto Ristorantino"
+                 loading="lazy">
+          </div>
+          <div class="gallery__item"
+               data-lightbox-src="./assets/images/ambiente/salao-04.jpg">
+            <img src="./assets/images/ambiente/salao-04.jpg"
+                 alt="Ambiente do Segreto Ristorantino"
+                 loading="lazy">
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════════════════
+         BLOCO 5 — A VISITA
+         ══════════════════════════════════════════════════════════ -->
+    <section class="visita section-padding" id="visita" aria-label="A Visita">
+      <div class="container">
+
+        <div class="visita__intro">
+          <p class="eyebrow js-fade-up">A Visita</p>
+          <div class="manifesto__separator" style="margin: 1.25rem 0;"></div>
+          <h2 class="text-3xl js-fade-up">Como nos encontrar.</h2>
+          <p class="js-fade-up">
+            O Segreto fica no mesmo endereço do restaurante Origem, na Alameda das Algarobas, 74,
+            no Caminho das Árvores. A entrada é discreta, ao lado. Há serviço de manobrista.
+          </p>
+        </div>
+
+        <!-- Três colunas de informação -->
+        <div class="visita-grid js-fade-up">
+
+          <address class="visita-col" style="font-style: normal;">
+            <p class="visita-col__label">Endereço</p>
+            <div class="visita-col__lines">
+              <span class="visita-col__line">Alameda das Algarobas, 74</span>
+              <span class="visita-col__line">Caminho das Árvores</span>
+              <span class="visita-col__line">Salvador, Bahia</span>
+            </div>
+          </address>
+
+          <div class="visita-col">
+            <p class="visita-col__label">Horário</p>
+            <div class="visita-col__lines">
+              <span class="visita-col__line">Terça a sábado</span>
+              <span class="visita-col__line">19h às 22h30</span>
+              <span class="visita-col__line">Apenas com reserva</span>
+            </div>
+          </div>
+
+          <div class="visita-col">
+            <p class="visita-col__label">Reservas</p>
+            <div class="visita-col__lines">
+              <span class="visita-col__line">
+                <a href="https://segreto.meitre.com/" target="_blank" rel="noopener noreferrer">
+                  segreto.meitre.com
+                </a>
+              </span>
+              <span class="visita-col__line">
+                <a href="https://wa.me/5571991582612" target="_blank" rel="noopener noreferrer">
+                  (71) 99158-2612
+                </a>
+              </span>
+              <span class="visita-col__line">
+                <a href="mailto:reservasegreto@grupoorigem.com.br">
+                  reservasegreto@grupoorigem.com.br
+                </a>
+              </span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Grupos -->
+        <p class="visita__grupos js-fade-up">
+          Mesas de até doze pessoas em ocasiões especiais —
+          consulte por <a href="https://wa.me/5571991582612" target="_blank" rel="noopener noreferrer" style="color: var(--color-gold-muted);">WhatsApp</a>
+          ou <a href="mailto:reservasegreto@grupoorigem.com.br" style="color: var(--color-gold-muted);">e-mail</a>.
+        </p>
+
+        <!-- Nota Gem Mini Bar — cross-sell da casa irmã -->
+        <p class="visita__gem-note js-fade-up">
+          Antes do jantar, o Gem Mini Bar fica no mesmo endereço.
+        </p>
+
+        <!-- Mapa discreto em escala de cinza -->
+        <div class="visita__map-wrapper js-fade-up">
+          <div class="map-overlay" id="map-overlay" role="button" tabindex="0" aria-label="Toque para interagir com o mapa">
+            Toque para interagir
+          </div>
+          <iframe
+            src="https://maps.google.com/maps?q=Alameda+das+Algarobas+74+Salvador+Bahia&output=embed&z=16"
+            width="100%"
+            height="100%"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Localização do Segreto Ristorantino — Alameda das Algarobas, 74, Salvador">
+          </iframe>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ============================================================
+       BLOCO 6 — RODAPÉ
+       ============================================================ -->
+  <footer class="site-footer" id="rodape">
+
+    <div class="footer__body">
+
+      <!-- Logo + tagline + Grupo Origem -->
+      <div class="footer__logo-area">
+        <img src="./assets/logo/segreto-logo-principal.png" alt="Segreto Ristorantino" loading="lazy">
+        <p class="footer__tagline">
+          Alameda das Algarobas, 74<br>
+          Caminho das Árvores &nbsp;·&nbsp; Salvador<br>
+          Terça a sábado, 19h às 22h30<br>
+          Apenas com reserva
+        </p>
+        <a href="https://www.grupoorigem.com.br/"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="footer__grupo-link">
+          Uma casa do Grupo Origem ↗
+        </a>
+      </div>
+
+      <!-- Contato -->
+      <div>
+        <h3 class="footer__col-title">Contato</h3>
+        <ul class="footer__col-list">
+          <li>
+            <a href="https://wa.me/5571991582612" target="_blank" rel="noopener noreferrer">
+              WhatsApp (71) 99158-2612
+            </a>
+          </li>
+          <li>
+            <a href="mailto:reservasegreto@grupoorigem.com.br">
+              reservasegreto@grupoorigem.com.br
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/segretoristorantino/" target="_blank" rel="noopener noreferrer">
+              @segretoristorantino
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Reservas -->
+      <div>
+        <h3 class="footer__col-title">Reservas</h3>
+        <ul class="footer__col-list">
+          <li>
+            <a href="https://segreto.meitre.com/" target="_blank" rel="noopener noreferrer">
+              segreto.meitre.com
+            </a>
+          </li>
+          <li>
+            <a href="https://livemenu.app/menu/656627ca96079c005bfc5ca8" target="_blank" rel="noopener noreferrer">
+              Menu digital
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Casas do Grupo Origem -->
+      <div>
+        <h3 class="footer__col-title">Grupo Origem</h3>
+        <div class="footer__casas">
+          <a href="https://www.grupoorigem.com.br/" target="_blank" rel="noopener noreferrer">Origem</a>
+          <a href="https://www.grupoorigem.com.br/" target="_blank" rel="noopener noreferrer">Ori</a>
+          <a href="https://www.grupoorigem.com.br/" target="_blank" rel="noopener noreferrer">Gem</a>
+        </div>
+        <!-- PENDENTE: substituir links das casas irmãs pelas URLs individuais corretas -->
+      </div>
+
+    </div>
+
+    <!-- Faixa inferior -->
+    <div class="footer__bottom">
+      <div style="display: flex; flex-direction: column; gap: 6px;">
+        <p>© 2022–2026 Segreto Ristorantino &nbsp;·&nbsp; Grupo Origem</p>
+        <a href="https://arthurjov.vercel.app/"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="footer__dev-link">
+          Desenvolvido por Arthur Vieira
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
+      </div>
+      <div class="footer__social">
+        <a href="https://www.instagram.com/segretoristorantino/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://wa.me/5571991582612" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <a href="mailto:reservasegreto@grupoorigem.com.br">E-mail</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- ============================================================
+       LIGHTBOX
+       ============================================================ -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Imagem ampliada">
+    <figure class="lightbox__figure">
+      <button class="lightbox__close" id="lightbox-close" aria-label="Fechar">×</button>
+      <img class="lightbox__img" src="" alt="" loading="lazy">
+    </figure>
+  </div>
+
+
+  <!-- ============================================================
+       SCRIPTS
+       ============================================================ -->
+  <!-- Lenis Smooth Scroll -->
+  <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+
+  <!-- GSAP Core + ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- Dados do menu (carregar antes de main.js) -->
+  <script src="./js/menu-data.js"></script>
+
+  <!-- Aplicação (ordem importa) -->
+  <script src="./js/preloader.js"></script>
+  <script src="./js/lenis.js"></script>
+  <script src="./js/animations.js"></script>
+  <script src="./js/main.js"></script>
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Segreto Ristorantino",
+    "servesCuisine": ["Italian", "Contemporary", "Brazilian"],
+    "acceptsReservations": true,
+    "hasMenu": "https://livemenu.app/menu/656627ca96079c005bfc5ca8",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Alameda das Algarobas, 74",
+      "addressLocality": "Salvador",
+      "addressRegion": "BA",
+      "addressCountry": "BR"
+    },
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday","Saturday"],
+      "opens": "19:00",
+      "closes": "22:30"
+    }],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "60"
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "Grupo Origem",
+      "url": "https://www.grupoorigem.com.br/"
+    },
+    "telephone": "+5571991582612",
+    "email": "reservasegreto@grupoorigem.com.br",
+    "sameAs": [
+      "https://www.instagram.com/segretoristorantino/",
+      "https://www.grupoorigem.com.br/"
+    ]
+  }
+  </script>
+
+</body>
+</html>
